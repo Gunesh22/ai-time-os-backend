@@ -5,8 +5,8 @@ class Settings(BaseSettings):
     PROJECT_NAME: str = "AI Time OS"
     API_V1_STR: str = "/api/v1"
     
-    # AI Credentials
-    GROK_API_KEY: str = "your_key_here"
+    # AI Credentials (xAI)
+    GROK_API_KEY: str = "your_key_here"  # Override in .env or Render Vars
     
     # Firebase Credential Path (Local)
     FIREBASE_CREDENTIALS_PATH: str = "serviceAccountKey.json"
