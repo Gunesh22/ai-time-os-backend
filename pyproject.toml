@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-time-os-backend"
+version = "1.0.0"
+description = "Voice-First Daily Operating System Backend"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*"]
