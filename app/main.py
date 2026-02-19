@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import settings
 from app.core.firebase import init_firebase, get_db
 from app.api.endpoints.voice import router as voice_router
+from app.api.endpoints.events import router as events_router
 from contextlib import asynccontextmanager
 
 @asynccontextmanager
@@ -39,6 +40,7 @@ app.add_middleware(
 )
 
 app.include_router(voice_router, prefix="/api/v1/voice", tags=["Voice"])
+app.include_router(events_router, prefix="/api/v1/events", tags=["Events"])
 
 @app.get("/")
 async def root():
